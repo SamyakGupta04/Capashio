@@ -1,0 +1,51 @@
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2em;
+  }
+}
+
+/* Navbar styles */
+
+/* Main container for Posts and Form */
+.main-container {
+  display: flex;
+  margin: 10px auto 20px auto;
+  /* Top margin accounts for fixed navbar height */
+  padding: 0 20px;
+}
+
+/* Posts section styles */
+.posts {
+  width: 66%;
+  margin-right: 2%;
+  border-radius: 8px;
+  padding: 20px;
+  animation: slideUp 0.7s ease-in-out;
+}
+
+/* Form section styles */
+.form {
+  padding: 30px;
+  margin-left: 20px;
+  animation: slideRight 1s ease-in-out;
+}

@@ -1,0 +1,115 @@
+.card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 350px;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px; /* Added border radius */
+  background: linear-gradient(135deg, #5a5548 0%, #000 100%); /* Added background gradient for black theme */
+  
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for media content */
+.card-media {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+  border-top-left-radius: 15px; /* Ensures the media content fits within the card's border radius */
+  border-top-right-radius: 15px; /* Ensures the media content fits within the card's border radius */
+}
+
+.title {
+  font-size: 1.8em;
+  margin: 15px 10px;
+  color: #ddd; /* Changed to lighter color for better readability in dark theme */
+  font-weight: bold;
+}
+
+/* Styles for card content */
+.card-content {
+  padding: 10px 15px;
+  color: #bbb; /* Changed to lighter color for better readability in dark theme */
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.card-content .post-creator {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.card-content .post-time {
+  color: #bbb;
+  font-size: 0.9em;
+}
+
+/* Tag styles */
+.card-tags {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  color: #007bff;
+}
+
+.card-tags span {
+  background: #e0f7fa;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+/* Styles for buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.button {
+  background: linear-gradient(135deg, #f7e4b2 0%, #000 100%);;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 10px;
+  margin: 15px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+
+
+.button:focus {
+  outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .card {
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .card-content {
+    font-size: 0.9em;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+}
+
+

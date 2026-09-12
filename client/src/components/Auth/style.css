@@ -1,0 +1,145 @@
+
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.paper {
+  background: linear-gradient(135deg, #5a5548 0%, #000 100%); /* Added background gradient for black theme */
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-in-out, slideIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+}
+.nameinput {
+  display: flex;
+  gap: 20px;
+}
+.input-half {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.input-full {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #faf8f8;
+  color: #e0e0e0;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+  border-color: #4ca1af;
+  outline: none;
+  background-color: #333;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background: #4ca1af;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #2c3e50;
+  transform: scale(1.05);
+}
+
+.submit-button {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.lock-icon {
+  font-size: 1.5rem;
+}
+
+.googleButton {
+  background-color: '#4285F4'; 
+  color: '#fff';
+  width: '100%';
+  padding: '10px';
+  border: 'none';
+  border-radius: '5px';
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+  cursor: 'pointer';
+  font-size: '16px';
+}
+.icon{
+  margin-right: '10px';
+}

@@ -1,0 +1,80 @@
+/* Form container styles */
+.form-container {
+  background: linear-gradient(135deg, #585445 0%, #111 100%); /* Slightly adjusted gradient for better contrast */
+  padding: 20px 30px; /* Added more padding for better spacing */
+  border-radius: 12px; /* Increased border-radius for smoother corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for more depth */
+  width: 100%;
+  max-width: 320px; /* Increased max-width for better layout */
+  
+}
+
+/* Form styles */
+form {
+  display: block; /* Changed to block to ensure form takes full width */
+  text-align: left;
+}
+
+/* Input field styles */
+input[type="text"] {
+  width: 90%;
+  height: 45px; /* Increased height for better usability */
+  margin-bottom: 15px; /* Increased margin for better spacing */
+  padding: 0 15px; /* Increased padding for better user experience */
+  border: 1px solid #666; /* Darker border for better contrast */
+  border-radius: 8px; /* Increased border-radius for smoother corners */
+  background-color: #f5eeee; /* Darker background for better contrast */
+  color: #000000; /* Light text color for better readability */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+input[type="text"]:focus {
+  border-color: #888; /* Brighter border color on focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  outline: none; /* Removed default outline */
+}
+
+/* Label styles */
+label {
+  display: block;
+  margin-bottom: 8px; /* Reduced margin for better spacing */
+  font-weight: bold;
+  color: #ddd; /* Lighter color for better readability */
+}
+
+
+
+
+.button1 {
+  width: 100%;
+  height: 45px; /* Ensured same height as submit button */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 4px solid goldenrod;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.button1 {
+  background-color: #f1f1f1; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Animation for form elements */
+.form-group {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); /* Added slight movement for more dynamic effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
