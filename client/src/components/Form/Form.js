@@ -1,26 +1,44 @@
 import React, { useState } from "react";
 import "./styles.css";
 import FileBase from "react-file-base64";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createPost } from "../../actions/posts";
 
+const emptyPost = {
+  creator: "",
+  title: "",
+  message: "",
+  tags: "",
+  selectedFile: "",
+};
+
 const Form = () => {
-  const [postData, setPostData] = useState({
-    creator: "",
-    title: "",
-    message: "",
-    tags: "",
-    selectedFile: "",
-  });
+  const [postData, setPostData] = useState(emptyPost);
 
   const dispatch = useDispatch();
+
+  const clear = () => setPostData(emptyPost);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    dispatch(createPost(postData));
-  };
+    if (!postData.title.trim() && !postData.message.trim()) {
+      alert("Add a title or a message before you submit.");
+      return;
+    }
 
-  const clear = () => {};
+    dispatch(
+      createPost({
+        ...postData,
+        tags: postData.tags
+          .split(",")
+          .map((tag) => tag.trim())
+          .filter((tag) => tag.length > 0),
+      })
+    );
+
+    clear();
+  };
 
   return (
     <div className="form-container">
@@ -69,6 +87,7 @@ const Form = () => {
             type="text"
             id="tags"
             name="tags"
+            placeholder="Separate tags with a comma"
             value={postData.tags}
             onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
           />
@@ -82,8 +101,8 @@ const Form = () => {
             }
           />
         </div>
-        <button className = 'button1' type="submit">Submit</button>
-        <button className = 'button1' onClick={clear}>Clear</button>
+        <button className="button1" type="submit">Submit</button>
+        <button className="button1" type="button" onClick={clear}>Clear</button>
       </form>
     </div>
   );

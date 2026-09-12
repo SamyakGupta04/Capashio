@@ -1,2 +1,8 @@
 node_modules
 build
+.DS_Store
+
+# Environment files. Never commit real credentials.
+.env
+.env.*
+!.env.example

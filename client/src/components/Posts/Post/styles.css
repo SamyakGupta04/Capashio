@@ -113,3 +113,12 @@
 }
 
 
+
+.card-media-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9a9a;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+}

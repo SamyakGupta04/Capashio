@@ -1,8 +1,8 @@
 import axios from 'axios';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 
+export const fetchPosts = () => axios.get(`${API_URL}/posts`);
+export const createPost = (newPost) => axios.post(`${API_URL}/posts`, newPost);
 
-export const fetchPosts = () => axios.get('http://localhost:5000/posts');
-export const createPost = (newPost) => axios.post('http://localhost:5000/posts', newPost);
-
-export const deletePost = (id) => axios.delete(`http://localhost:5000/posts/${id}`);
+export const deletePost = (id) => axios.delete(`${API_URL}/posts/${id}`);

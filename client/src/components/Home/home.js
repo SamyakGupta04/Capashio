@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="main-container">
             <div className="posts">
-              <Posts />
+              <Posts setCurrentId={setCurrentId} />
             </div>
             <div className="form">
               <Form />
