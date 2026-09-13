@@ -1,6 +1,15 @@
 node_modules
+dist
 build
 .DS_Store
+*.log
+*.pdf
+
+# Local tool settings
+.claude/
+
+# Model weights (see client/scripts/fetch-models.sh)
+client/public/models
 
 # Environment files. Never commit real credentials.
 .env

@@ -4,9 +4,9 @@
   "private": true,
   "description": "Media sharing app. Express API plus React client.",
   "scripts": {
-    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"cyan,magenta\" --kill-others-on-fail \"npm --prefix server start\" \"npm --prefix client start\"",
+    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"cyan,magenta\" --kill-others-on-fail \"npm --prefix server start\" \"npm --prefix client run dev\"",
     "server": "npm --prefix server start",
-    "client": "npm --prefix client start",
+    "client": "npm --prefix client run dev",
     "install:all": "npm install && npm --prefix server install && npm --prefix client install"
   },
   "devDependencies": {
