@@ -15,3 +15,7 @@ client/public/models
 .env
 .env.*
 !.env.example
+
+# Local notes
+OVERVIEW.md
+CLAUDE.md
